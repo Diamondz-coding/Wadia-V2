@@ -51,6 +51,12 @@ bot.on('message', message=>{
                      message.reply(":mailbox_with_mail:. Whoooosh! I Sent You All The Wadia Command In A DM! :smile:")
                       message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! ")
 
+      case 'hello':
+        if(args[1] === "wadia"){
+          message.reply("Hello " + author)
+        }
+
+
 
 
 
