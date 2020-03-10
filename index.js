@@ -75,7 +75,7 @@ bot.on('message', message => {
 
           case "dm":
             if(!args[1]) return message.reply("Do You Mean '?dm me' ?")
-            else if(args[1] === "me") return ("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
+            else if(args[1] === "me") return message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
 break;
  }
 })
