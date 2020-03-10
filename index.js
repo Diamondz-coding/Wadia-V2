@@ -90,7 +90,7 @@ bot.on('message', message => {
             case 'fortnite':
               var whereland = Math.floor(Math.random() * 15);
               if(!args[1]) return message.reply("What About Fortnite?; Try ?fortnite landing")
-              else if(args[1] === landing) return message.channel.send(fortniteland[whereland]);
+              else if(args[1] === "landing") return message.channel.send(fortniteland[whereland]);
 break;
  }
 })
