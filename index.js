@@ -24,11 +24,12 @@ bot.on('message', message=>{
 
     let args = message.content.substring(PREFIX.length).split(' ');
 
-    switch(args[0]){
+    switch(args[0]) {
 
       case 'about':
         if(args[1] === "wadia"){
-      message.channel.send("Hi, I'm Wadia V3! I Was Created By A Few People And Whooosh Now I'm Here In Your Server! ")
+          bot.commands.get("aboutwadia").execute(message, args);
+      
         }
       break;
       case "ping":
@@ -38,28 +39,17 @@ bot.on('message', message=>{
 
 
       case 'clear':
-      if(!args[1]){
-        message.reply("What Should I Delete?")
-      }
-      if(args[1] > 100){
-        message.reply("Max Message Deleting At One Time Can Be Either 100 or > 100, Sorry, I Dont Make The Rules! :grimacing:")
-      }
-      message.channel.bulkDelete(args[1]);
+          bot.commands.get("clearmessage").execute(message, args);
+  
       break;
 
       case 'CLEAR':
-      if(!args[1]) {
-
-        return message.reply('Error 101; Please Specify Amount; Like This: "?clear 12" or "?clear 134"')
-      }
-
-      else{
         bot.commands.get("clearmessage").execute(message, args);
-      } 
+       
       break;
 
 
-      case   'help':
+      case'help':
         bot.commands.get("help").execute(message, args);
                       break;
 
@@ -69,9 +59,9 @@ bot.on('message', message=>{
                         break;
 
                         case 'wadia':
-                          if(args[1] === "commands") {
-                            message.reply("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
-                          }
+                          bot.commands.get("wadiacommands").execute(message, args);
+                          
+                          
                             break;
                             
                          
@@ -79,8 +69,8 @@ bot.on('message', message=>{
                           
 
 
-  }
-    })
+  } 
+})
 
 
 bot.login(process.env.token);
