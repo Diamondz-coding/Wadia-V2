@@ -32,7 +32,7 @@ bot.on('message', message=>{
         }
       break;
       case "ping":
-        bot.commands.get("ping").execute(messsage, args);
+        bot.commands.get("ping").execute(message, args);
         break;
 
 
@@ -67,7 +67,7 @@ bot.on('message', message=>{
                       break;
 
                       case 'hello':
-                        bot.commands.get("hello").execute(messsage, args);
+                        bot.commands.get("hello").execute(message, args);
                         
                         break;
 
