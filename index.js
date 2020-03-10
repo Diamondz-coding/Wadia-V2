@@ -14,6 +14,8 @@ const token = 'NjgzNjc1NTY3NzQ0NDgzNTgw.XmdAbg.Xc0-ME9dfi-IqVDCfN9csNXWNq8';
 
 var PREFIX = '?';
 
+var randomnumb = ["You Rolled 1", "You Rolled 2", "You Rolled 3", "You Rolled 4", "You Rolled 5", "You Rolled 6"]
+
 
 
 bot.on('ready', () => {
@@ -76,6 +78,12 @@ bot.on('message', message => {
           case "dm":
             if(!args[1]) return message.reply("Do You Mean '?dm me' ?")
             else if(args[1] === "me") return message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
+
+            case "roll":
+              var random = Math.floor(Math.random() * randomnumb);
+            if(!args[1]) return message.reply("What Do You Want Me To Roll?")
+            else if(args[1] === "dice") return message.reply(randomnumb[random]);
+            break;
 break;
  }
 })
