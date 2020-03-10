@@ -1,6 +1,15 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
+const fs = require('fs');
+bot.commands = Discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+  const command = require(`./commands/${file}`);
+  bot.commands.set(command.name, command);
+}
+
 const token = 'NjgzNjc1NTY3NzQ0NDgzNTgw.XmdAbg.Xc0-ME9dfi-IqVDCfN9csNXWNq8';
 
 var PREFIX = '?';
@@ -22,6 +31,9 @@ bot.on('message', message=>{
       message.channel.send("Hi, I'm Wadia V3! I Was Created By A Few People And Whooosh Now I'm Here In Your Server! ")
         }
       break;
+      case "ping":
+        bot.commands.get("ping").execute(messsage, args);
+        break;
 
 
 
@@ -55,7 +67,8 @@ bot.on('message', message=>{
                       break;
 
                       case 'hello':
-                        message.reply("Hello!")
+                        bot.commands.get("hello").execute(messsage, args);
+                        
                         break;
 
                         case 'wadia':
