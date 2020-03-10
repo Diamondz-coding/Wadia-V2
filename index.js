@@ -33,13 +33,13 @@ bot.on('message', message=>{
       break;
 
       case 'CLEAR':
-      if(!args[1]) { 
-        
+      if(!args[1]) {
+
         return message.reply('Error 101; Please Specify Amount; Like This: "?clear 12" or "?clear 134"')
       }
-      
+
       else{
-    
+
       if(args[1] < 100) {
       message.channel.bulkDelete(args[1]);
     } }
@@ -54,20 +54,40 @@ bot.on('message', message=>{
                       case '?hello':
                         message.reply("Hello!")
                         break;
-                        
-                        
 
-      
-        
+       case 'time'
+       function checkTime(i) {
+       if (i < 10) {
+       i = "0" + i;
+       }
+       return i;
+      }
+
+  function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  // add a zero in front of numbers<10
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  t = setTimeout(function() {
+    startTime()
+  }, 500);
+}
+startTime();
 
 
 
 
 
-    
-    
+
+
+
+
   }
     })
-    
+
 
 bot.login(process.env.token);
