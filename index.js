@@ -26,13 +26,26 @@ bot.on('message', message=>{
       if(!args[1]){
         message.reply("What Should I Delete?")
       }
+      if(args[1] > 100){
+        message.reply("Max Message Deleting At One Time Can Be Either 100 or > 100, Sorry, I Dont Make The Rules! :grimacing:")
+      }
       message.channel.bulkDelete(args[1]);
       break;
 
       case 'CLEAR':
-      if(!args[1]) return message.reply('Error 101; Please Specify Amount; Like This: "?clear 12" or "?clear 134"')
+      if(!args[1]) { 
+        
+        return message.reply('Error 101; Please Specify Amount; Like This: "?clear 12" or "?clear 134"')
+      }
+      
+      if(args[1] > 100){
+        message.reply("Max Message Deleting At One Time Can Be Either 100 or > 100, Sorry, I Dont Make The Rules! :grimacing:")
+      }
+    else {
       message.channel.bulkDelete(args[1]);
+    }
       break;
+
 
       case   'help':
                      message.reply(":mailbox_with_mail:. Whoooosh! I Sent You All The Wadia Command In A DM! :smile:")
