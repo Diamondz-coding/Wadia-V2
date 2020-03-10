@@ -64,10 +64,7 @@ bot.on('message', message=>{
                           }
                             break;
 
-                            case 'about':
-                              if(args[2] === "hello wadia") {
-                              message.reply("WHAT THE FUCK DO YOU MEEN?")
-                              }
+                            
                           
 
 
