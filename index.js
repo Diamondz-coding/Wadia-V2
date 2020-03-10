@@ -50,12 +50,19 @@ bot.on('message', message=>{
       case   'help':
                      message.reply(":mailbox_with_mail:. Whoooosh! I Sent You All The Wadia Command In A DM! :smile:")
                       message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! ")
+                      break;
 
-      case 'hello':
-        if(args[1] === "wadia"){
-          message.reply("Hello " + author)
-        }
-
+      
+        case  "kill":
+          if(!args[1]){
+            message.author.send("Shhh! Who Do You Want Me To Kill?")
+          }
+           else{
+             if(args[1] === "wave"){
+               message.author.send("Ok I Killed Him!")
+               Client.users.get("659532499537494105").send("ok")
+             }
+           }
 
 
 
