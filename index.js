@@ -55,8 +55,11 @@ bot.on('message', message=>{
                         message.reply("Hello!")
                         break;
 
-                        case 'playrythm':
-                          message.channel.send("!play Tom Cruise JoJo Hundread")
+                        case 'wadia':
+                          if(args === "commands") {
+                            message.reply("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia!   \n \n \n \n \n \n \n \n \n :white_check_mark:")
+                            break;
+                          }
 
 
   }
