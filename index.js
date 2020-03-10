@@ -18,47 +18,31 @@ var randomnumb = ["You Rolled 1", "You Rolled 2", "You Rolled 3", "You Rolled 4"
 
 var fortniteland = ["Craggy Cliffs", "Dirty Dicks", "Frenzy Farm", "Holly Hedges", "The Agency", "Misty Meadows", "Pleasant Park", "Retail Row", "Salty Springs", "Slurpy Swamps", "Steamy Stacks", "The Yacht", "The Rig", "The Shark", "The Grotto"];
 
-
+var version = "1.3.2";
 
 bot.on('ready', () => {
     console.log('This Bot Is Online!')
 })
-
 bot.on('message', message => {
-
-    let args = message.content.substring(PREFIX.length).split(' ');
-
-    switch (args[0]) {
-
-        case 'about':
+let args = message.content.substring(PREFIX.length).split(' ');
+switch (args[0]) {
+case 'about':
             if (args[1] === "wadia") {
                 bot.commands.get("aboutwadia").execute(message, args);
-
             }
             break;
-        case "ping":
+            case "ping": 
             bot.commands.get("ping").execute(message, args);
             break;
-
-
-
-        case 'clear':
+case 'clear':
             if (!args[1]) return message.reply(':x: Error Please Define Second arg :x:')
             message.channel.bulkDelete(args[1]);
             break;
-
-
-
-
-        case 'CLEAR':
+case 'CLEAR':
             if (!args[1]) return message.reply(':x: Error Please Define Second arg :x:')
             message.channel.bulkDelete(args[1]);
             break;
-
-
-
-
-        case 'help':
+case 'help':
             bot.commands.get("help").execute(message, args);
             break;
 
@@ -76,21 +60,22 @@ bot.on('message', message => {
           if(!args[1]) return message.reply("Do You Mean '?just here' ?")
           else if(args[1] === "here") return message.channel.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
           break;
-
-          case "dm":
+case "dm":
             if(!args[1]) return message.reply("Do You Mean '?dm me' ?")
             else if(args[1] === "me") return message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
-
             case "roll":
               var random = Math.floor(Math.random() * 6);
             if(!args[1]) return message.reply("What Do You Want Me To Roll?")
             else if(args[1] === "dice") return message.channel.send(randomnumb[random]);
             break;
-
-            case 'fortnite':
+case 'fortnite':
               var whereland = Math.floor(Math.random() * 15);
               if(!args[1]) return message.reply("What About Fortnite?; Try ?fortnite landing")
               else if(args[1] === "landing") return message.channel.send(fortniteland[whereland]);
+              break;
+              case "info":
+                if(!args[1]) return message.reply("What Would You Like To Know About? Try '?info version'")
+                else if(args[1] === version) return message.channel.send("Wadia Is Currently On Version " , version)
 break;
  }
 })
