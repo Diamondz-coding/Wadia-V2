@@ -13,16 +13,16 @@ bot.on('ready', () =>{
 
 bot.on('message', message=>{
 
-    let args = message.content.substring(PREFIX.length).split('');
+    let args = message.content.substring(PREFIX.length).split(' ');
 
     switch(args[0]){
 
-      case '?about':
+      case 'about':
       message.channel.send("Hi, I'm Wadia V3! I Was Created By A Few People And Whooosh Now I'm Here In Your Server! ")
       break;
 
 
-      case '?clear':
+      case 'clear':
       if(!args[1]){
         message.reply("What Should I Delete?")
       }
@@ -32,7 +32,7 @@ bot.on('message', message=>{
       message.channel.bulkDelete(args[1]);
       break;
 
-      case '?CLEAR':
+      case 'CLEAR':
       if(!args[1]) { 
         
         return message.reply('Error 101; Please Specify Amount; Like This: "?clear 12" or "?clear 134"')
@@ -46,7 +46,7 @@ bot.on('message', message=>{
       break;
 
 
-      case   '?help':
+      case   'help':
                      message.reply(":mailbox_with_mail:. Whoooosh! I Sent You All The Wadia Command In A DM! :smile:")
                       message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! ")
                       break;
