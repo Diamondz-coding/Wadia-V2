@@ -52,7 +52,13 @@ bot.on('message', message=>{
                       break;
 
                       case 'hello':
-                        message.reply("Hello!") 
+                        message.reply("Hello!")
+                        break;
+                        
+                        case 'hi':
+                          if(args[1] === "liam") {
+                            message.channel.send("Hi Liam Aswell!")
+                          }
 
       
         
