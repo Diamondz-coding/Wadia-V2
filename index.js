@@ -56,7 +56,7 @@ bot.on('message', message=>{
                         break;
 
                         case 'wadia':
-                          if(args === "commands") {
+                          if(args[1] === "commands") {
                             message.reply("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia!   \n \n \n \n \n \n \n \n \n :white_check_mark:")
                             break;
                           }
