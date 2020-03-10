@@ -43,7 +43,7 @@ bot.on('message', message => {
             message.reply(":x: Please Specify Missing ARGS :x:")
           }
           else {
-            bot.commands.get("clearmessage").execute(message, args);
+            message.bulkDelete(args);
           }
 
             break;
@@ -53,7 +53,8 @@ bot.on('message', message => {
             message.reply(":x: Please Specify Missing ARGS :x:")
           }
           else {
-            bot.commands.get("clearmessage").execute(message, args);
+            
+            message.bulkDelete(args);
           }
 
             break;
