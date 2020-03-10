@@ -16,6 +16,8 @@ var PREFIX = '?';
 
 var randomnumb = ["You Rolled 1", "You Rolled 2", "You Rolled 3", "You Rolled 4", "You Rolled 5", "You Rolled 6"]
 
+var fortniteland = ["Craggy Cliffs", "Dirty Dicks", "Frenzy Farm", "Holly Hedges", "The Agency", "Misty Meadows", "Pleasant Park", "Retail Row", "Salty Springs", "Slurpy Swamps", "Steamy Stacks", "The Yacht", "The Rig", "The Shark", "The Grotto"];
+
 
 
 bot.on('ready', () => {
@@ -84,6 +86,11 @@ bot.on('message', message => {
             if(!args[1]) return message.reply("What Do You Want Me To Roll?")
             else if(args[1] === "dice") return message.channel.send(randomnumb[random]);
             break;
+
+            case 'fortnite':
+              var whereland = Math.floor(Math.random() * 15);
+              if(!args[1]) return message.reply("What About Fortnite?; Try ?fortnite landing")
+              else if(args[1] === landing) return message.channel.send(fortniteland[whereland]);
 break;
  }
 })
