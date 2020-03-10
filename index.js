@@ -55,14 +55,6 @@ bot.on('message', message=>{
                         message.reply("Hello!")
                         break;
 
-     case 'time'
-     message.reply("the time is" + new Date().toLocaleTimeString();)
-
-
-
-
-
-
 
   }
     })
