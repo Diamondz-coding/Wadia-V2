@@ -38,12 +38,11 @@ bot.on('message', message=>{
         return message.reply('Error 101; Please Specify Amount; Like This: "?clear 12" or "?clear 134"')
       }
       
-      if(args[1] > 100){
-        message.reply("Max Message Deleting At One Time Can Be Either 100 or > 100, Sorry, I Dont Make The Rules! :grimacing:")
-      }
-    else {
+      else{
+    
+      if(args[1] < 100) {
       message.channel.bulkDelete(args[1]);
-    }
+    } }
       break;
 
 
@@ -52,19 +51,11 @@ bot.on('message', message=>{
                       message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! ")
                       break;
 
+                      case 'hello':
+                        message.reply("Hello!") 
+
       
-        case  "kill":
-          if(!args[1]){
-            message.author.send("Shhh! Who Do You Want Me To Kill?")
-          }
-           else{
-             if(args[1] === "wave"){
-               message.author.send("Ok I Killed Him!")
-              Client = "659532499537494105"
-               Client.users.get("659532499537494105").send("ok")
-             }
-           }
-
+        
 
 
 
@@ -72,7 +63,7 @@ bot.on('message', message=>{
 
     
     
-                    }
+  }
     })
     
 
