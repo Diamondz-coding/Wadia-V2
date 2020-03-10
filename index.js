@@ -16,7 +16,7 @@ var PREFIX = '?';
 
 var randomnumb = ["You Rolled 1", "You Rolled 2", "You Rolled 3", "You Rolled 4", "You Rolled 5", "You Rolled 6"]
 
-var fortniteland = ["Craggy Cliffs", "Dirty Dicks", "Frenzy Farm", "Holly Hedges", "The Agency", "Misty Meadows", "Pleasant Park", "Retail Row", "Salty Springs", "Slurpy Swamps", "Steamy Stacks", "The Yacht", "The Rig", "The Shark", "The Grotto"];
+var fortniteland = ["Craggy Cliffs", "Dirty Docks", "Frenzy Farm", "Holly Hedges", "The Agency", "Misty Meadows", "Pleasant Park", "Retail Row", "Salty Springs", "Slurpy Swamps", "Steamy Stacks", "The Yacht", "The Rig", "The Shark", "The Grotto"];
 
 var version = "1.3.2";
 
@@ -73,7 +73,10 @@ case 'fortnite':
 case "info":
                 if(!args[1]) return message.reply("What Would You Like To Know About? Try '?info version'")
                 else if(args[1] === "version") return message.channel.send("Wadia Is Currently On Version " + version)
-break;
- }
+                else if(args[1] === "creation") return message.channel.send(" I Was Created By 2 People I Will Call Them Wave And Diamondz They Are Beginner Coders So It Took Them 3 Days To Get The BotTo Work And Also NEITHER Of Them Knew The Slightest Part OF Node.js! https://tenor.com/view/hopeless-disappointed-ryan-reynolds-facepalm-embarrassed-gif-5436796 \n I'm Currently Hosted On GitHub And Heroku! Click This Link To See Me On GitHub!: https://github.com/Diamondz-coding/Wadia-V2");
+
+                break;
+                
+        }
 })
 bot.login(process.env.token);
