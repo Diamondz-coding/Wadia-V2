@@ -51,9 +51,12 @@ bot.on('message', message=>{
                       message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! ")
                       break;
 
-                      case '?hello':
+                      case 'hello':
                         message.reply("Hello!")
                         break;
+
+                        case 'playrythm':
+                          message.channel.send("!play Tom Cruise JoJo Hundread")
 
 
   }
