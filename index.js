@@ -63,7 +63,11 @@ bot.on('message', message=>{
                             message.reply("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
                           }
                             break;
-
+                            
+                            case 'test':
+                              var importtesting = "this is a robbery"
+                              message.author.send( '${importtesting}')
+                              break;
                             
                           
 
