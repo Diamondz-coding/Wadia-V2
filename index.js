@@ -31,7 +31,7 @@ case 'about':
                 bot.commands.get("aboutwadia").execute(message, args);
             }
             break;
-            case "ping": 
+case "ping": 
             bot.commands.get("ping").execute(message, args);
             break;
 case 'clear':
@@ -45,25 +45,22 @@ case 'CLEAR':
 case 'help':
             bot.commands.get("help").execute(message, args);
             break;
-
-        case 'hello':
+case 'hello':
             bot.commands.get("hello").execute(message, args);
-
             break;
-
-        case 'wadia':
+case 'wadia':
           if(!args[1]) return message.reply("Sorry, I Don't Understand, Try Again With ?wadia commands")
           else if(args[1] === "commands"){
             message.reply("Would You Like Your Commands In A DM Or Just Here; Type '?dm me' or '?just here' to answer")
           }
-          case "just":
+case "just":
           if(!args[1]) return message.reply("Do You Mean '?just here' ?")
           else if(args[1] === "here") return message.channel.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
           break;
 case "dm":
             if(!args[1]) return message.reply("Do You Mean '?dm me' ?")
             else if(args[1] === "me") return message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
-            case "roll":
+case "roll":
               var random = Math.floor(Math.random() * 6);
             if(!args[1]) return message.reply("What Do You Want Me To Roll?")
             else if(args[1] === "dice") return message.channel.send(randomnumb[random]);
@@ -73,9 +70,9 @@ case 'fortnite':
               if(!args[1]) return message.reply("What About Fortnite?; Try ?fortnite landing")
               else if(args[1] === "landing") return message.channel.send(fortniteland[whereland]);
               break;
-              case "info":
+case "info":
                 if(!args[1]) return message.reply("What Would You Like To Know About? Try '?info version'")
-                else if(args[1] === version) return message.channel.send("Wadia Is Currently On Version " , version)
+                else if(args[1] === "version") return message.channel.send("Wadia Is Currently On Version " , version)
 break;
  }
 })
