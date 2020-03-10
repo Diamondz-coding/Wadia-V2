@@ -5,9 +5,9 @@ const fs = require('fs');
 bot.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for(const file of commandFiles){
-  const command = require(`./commands/${file}`);
-  bot.commands.set(command.name, command);
+for (const file of commandFiles) {
+    const command = require(`./commands/${file}`);
+    bot.commands.set(command.name, command);
 }
 
 const token = 'NjgzNjc1NTY3NzQ0NDgzNTgw.XmdAbg.Xc0-ME9dfi-IqVDCfN9csNXWNq8';
@@ -16,60 +16,58 @@ var PREFIX = '?';
 
 
 
-bot.on('ready', () =>{
+bot.on('ready', () => {
     console.log('This Bot Is Online!')
 })
 
-bot.on('message', message=>{
+bot.on('message', message => {
 
     let args = message.content.substring(PREFIX.length).split(' ');
 
-    switch(args[0]) {
+    switch (args[0]) {
 
-      case 'about':
-        if(args[1] === "wadia"){
-          bot.commands.get("aboutwadia").execute(message, args);
-      
-        }
-      break;
-      case "ping":
-        bot.commands.get("ping").execute(message, args);
-        break;
+        case 'about':
+            if (args[1] === "wadia") {
+                bot.commands.get("aboutwadia").execute(message, args);
 
-
-
-      case 'clear':
-          bot.commands.get("clearmessage").execute(message, args);
-  
-      break;
-
-      case 'CLEAR':
-        bot.commands.get("clearmessage").execute(message, args);
-       
-      break;
+            }
+            break;
+        case "ping":
+            bot.commands.get("ping").execute(message, args);
+            break;
 
 
-      case'help':
-        bot.commands.get("help").execute(message, args);
-                      break;
 
-                      case 'hello':
-                        bot.commands.get("hello").execute(message, args);
-                        
-                        break;
+        case 'clear':
+            bot.commands.get("clearmessage").execute(message, args);
 
-                        case 'wadia':
-                          bot.commands.get("wadiacommands").execute(message, args);
-                          
-                          
-                            break;
-                            
-                         
-                            
-                          
+            break;
+
+        case 'CLEAR':
+            bot.commands.get("clearmessage").execute(message, args);
+
+            break;
 
 
-  } 
+        case 'help':
+            bot.commands.get("help").execute(message, args);
+            break;
+
+        case 'hello':
+            bot.commands.get("hello").execute(message, args);
+
+            break;
+
+        case 'wadia':
+            bot.commands.get("wadiacommands").execute(message, args);
+
+
+            break;
+
+
+
+
+    }
 })
 
 

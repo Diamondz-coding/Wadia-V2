@@ -1,4 +1,4 @@
-odule.exports = {
+module.exports = {
     name: 'message clearer',
     description: "Clears Messages With Commands Clear [args]",
     execute(message, args){
