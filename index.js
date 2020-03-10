@@ -56,8 +56,7 @@ bot.on('message', message=>{
                         break;
 
      case 'time'
-     var time = new Date().toLocaleTimeString();
-     message.reply("the time is" + time)
+     message.reply("the time is" + new Date().toLocaleTimeString();)
 
 
 
