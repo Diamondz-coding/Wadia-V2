@@ -55,10 +55,7 @@ bot.on('message', message=>{
                         message.reply("Hello!")
                         break;
                         
-                        case 'hi':
-                          if(args[1] === "liam") {
-                            message.channel.send("Hi Liam Aswell!")
-                          }
+                        
 
       
         
