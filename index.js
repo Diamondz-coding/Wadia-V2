@@ -18,8 +18,11 @@ bot.on('message', message=>{
     switch(args[0]){
 
       case 'about':
+        if(args[1] === "wadia"){
       message.channel.send("Hi, I'm Wadia V3! I Was Created By A Few People And Whooosh Now I'm Here In Your Server! ")
+        }
       break;
+
 
 
       case 'clear':
@@ -58,8 +61,14 @@ bot.on('message', message=>{
                         case 'wadia':
                           if(args[1] === "commands") {
                             message.reply("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
-                            break;
                           }
+                            break;
+
+                            case 'about':
+                              if(args[2] === "hello wadia") {
+                              message.reply("WHAT THE FUCK DO YOU MEEN?")
+                              }
+                          
 
 
   }
