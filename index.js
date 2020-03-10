@@ -39,25 +39,19 @@ bot.on('message', message => {
 
 
         case 'clear':
-          if(!args[1]){
-            message.reply(":x: Please Specify Missing ARGS :x:")
-          }
-          else {
-            message.bulkDelete(args);
-          }
-
+            if (!args[1]) return message.reply(':x: Error Please Define Second arg :x:')
+            message.channel.bulkDelete(args[1]);
             break;
+
+
+
 
         case 'CLEAR':
-          if(!args[1]){
-            message.reply(":x: Please Specify Missing ARGS :x:")
-          }
-          else {
-            
-            message.bulkDelete(args);
-          }
-
+            if (!args[1]) return message.reply(':x: Error Please Define Second arg :x:')
+            message.channel.bulkDelete(args[1]);
             break;
+
+
 
 
         case 'help':
