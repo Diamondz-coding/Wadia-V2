@@ -72,7 +72,7 @@ case 'fortnite':
               break;
 case "info":
                 if(!args[1]) return message.reply("What Would You Like To Know About? Try '?info version'")
-                else if(args[1] === "version") return message.channel.send("Wadia Is Currently On Version " , version)
+                else if(args[1] === "version") return message.channel.send("Wadia Is Currently On Version " + version)
 break;
  }
 })
