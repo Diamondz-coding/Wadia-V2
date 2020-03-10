@@ -39,12 +39,22 @@ bot.on('message', message => {
 
 
         case 'clear':
+          if(!args[1]){
+            message.reply(":x: Please Specify Missing ARGS :x:")
+          }
+          else {
             bot.commands.get("clearmessage").execute(message, args);
+          }
 
             break;
 
         case 'CLEAR':
+          if(!args[1]){
+            message.reply(":x: Please Specify Missing ARGS :x:")
+          }
+          else {
             bot.commands.get("clearmessage").execute(message, args);
+          }
 
             break;
 
