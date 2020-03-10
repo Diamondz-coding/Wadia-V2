@@ -80,9 +80,9 @@ bot.on('message', message => {
             else if(args[1] === "me") return message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
 
             case "roll":
-              var random = Math.floor(Math.random() * randomnumb);
+              var random = Math.floor(Math.random() * 6);
             if(!args[1]) return message.reply("What Do You Want Me To Roll?")
-            else if(args[1] === "dice") return message.reply(randomnumb[random]);
+            else if(args[1] === "dice") return message.channel.send(randomnumb[random]);
             break;
 break;
  }
