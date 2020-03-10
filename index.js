@@ -66,23 +66,17 @@ bot.on('message', message => {
         case 'wadia':
           if(!args[1]) return message.reply("Sorry, I Don't Understand, Try Again With ?wadia commands")
           else if(args[1] === "commands"){
-            message.channel.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
+            message.reply("Would You Like Your Commands In A DM Or Just Here; Type '?dm me' or '?just here' to answer")
           }
+          case "just":
+          if(!args[1]) return message.reply("Do You Mean '?just here' ?")
+          else if(args[1] === "here") return message.channel.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
+          break;
 
-
-          
-            
-
-          
-            
-
-            break;
-
-
-
-
-    }
+          case "dm":
+            if(!args[1]) return message.reply("Do You Mean '?dm me' ?")
+            else if(args[1] === "me") return ("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
+break;
+ }
 })
-
-
 bot.login(process.env.token);
