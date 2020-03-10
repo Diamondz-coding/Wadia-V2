@@ -64,8 +64,17 @@ bot.on('message', message => {
             break;
 
         case 'wadia':
-            bot.commands.get("wadiacommands").execute(message, args);
+          if(!args[1]) return message.reply("Sorry, I Don't Understand, Try Again With ?wadia commands")
+          else if(args[1] === "commands"){
+            message.channel.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
+          }
 
+
+          
+            
+
+          
+            
 
             break;
 
