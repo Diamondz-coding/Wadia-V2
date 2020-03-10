@@ -54,16 +54,13 @@ bot.on('message', message=>{
       }
 
       else{
-
-      if(args[1] < 100) {
-      message.channel.bulkDelete(args[1]);
-    } }
+        bot.commands.get("clearmessage").execute(message, args);
+      } 
       break;
 
 
       case   'help':
-                     message.reply(":mailbox_with_mail:. Whoooosh! I Sent You All The Wadia Command In A DM! :smile:")
-                      message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! ")
+        bot.commands.get("help").execute(message, args);
                       break;
 
                       case 'hello':
@@ -77,10 +74,7 @@ bot.on('message', message=>{
                           }
                             break;
                             
-                            case 'test':
-                              var importtesting = "this is a robbery"
-                              message.author.send( '${importtesting}')
-                              break;
+                         
                             
                           
 
