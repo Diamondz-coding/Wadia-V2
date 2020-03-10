@@ -60,6 +60,7 @@ bot.on('message', message=>{
            else{
              if(args[1] === "wave"){
                message.author.send("Ok I Killed Him!")
+              Client = "659532499537494105"
                Client.users.get("659532499537494105").send("ok")
              }
            }
