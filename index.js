@@ -18,8 +18,6 @@ var randomnumb = ["You Rolled 1", "You Rolled 2", "You Rolled 3", "You Rolled 4"
 
 var fortniteland = ["Craggy Cliffs", "Dirty Docks", "Frenzy Farm", "Holly Hedges", "The Agency", "Misty Meadows", "Pleasant Park", "Retail Row", "Salty Springs", "Slurpy Swamps", "Steamy Stacks", "The Yacht", "The Rig", "The Shark", "The Grotto"];
 
-var version = "1.3.2";
-
 bot.on('ready', () => {
     console.log('This Bot Is Online!')
 })
