@@ -35,7 +35,7 @@ case "ping":
             bot.commands.get("ping").execute(message, args);
             break;
 case 'clear':
-            if (!args[1]) return message.reply(':x: Error Please Define Second arg :x:')
+            if (!args[1]) return message.reply(':x: Error Please Define Second arg')
             message.channel.bulkDelete(args[1]);
             break;
 case 'CLEAR':
@@ -53,6 +53,7 @@ case 'wadia':
           else if(args[1] === "commands"){
             message.reply("Would You Like Your Commands In A DM Or Just Here; Type '?dm me' or '?just here' to answer")
           }
+          break;
 case "just":
           if(!args[1]) return message.reply("Do You Mean '?just here' ?")
           else if(args[1] === "here") return message.channel.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
@@ -60,6 +61,7 @@ case "just":
 case "dm":
             if(!args[1]) return message.reply("Do You Mean '?dm me' ?")
             else if(args[1] === "me") return message.author.send("All Commands! \n 'Clear' - Clear The Chat! \n 'about' - Learn About Wadia! :white_check_mark:")
+            break;
 case "roll":
               var random = Math.floor(Math.random() * 6);
             if(!args[1]) return message.reply("What Do You Want Me To Roll?")
@@ -74,7 +76,6 @@ case "info":
                 if(!args[1]) return message.reply("What Would You Like To Know About? Try '?info version'")
                 else if(args[1] === "version") return message.channel.send("Wadia Is Currently On Version 1.3.2")
                 else if(args[1] === "creation") return message.channel.send(" Hi, I'm Wadia, I Was Created By Two People And I'll Call Them Wave And Diamondz They Are Beginner Coders So It Took Them 3 Days To Get The BotTo Work And Also NEITHER Of Them Knew The Slightest Part OF Node.js! https://tenor.com/view/hopeless-disappointed-ryan-reynolds-facepalm-embarrassed-gif-5436796 \n I'm Currently Hosted On GitHub And Heroku! Click This Link To See Me On GitHub!: https://github.com/Diamondz-coding/Wadia-V2");
-
                 break;
                 
         }
