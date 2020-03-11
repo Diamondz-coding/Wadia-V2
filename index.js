@@ -37,7 +37,7 @@ case 'clear':
             message.channel.bulkDelete(args[1]);
             break;
 case 'CLEAR':
-            if (!args[1]) return message.reply(':x: Error Please Define Second arg :x:')
+            if (!args[1]) return message.reply(':x: Error Please Define Second arg')
             message.channel.bulkDelete(args[1]);
             break;
 case 'help':
@@ -70,11 +70,6 @@ case 'fortnite':
               if(!args[1]) return message.reply("What About Fortnite?; Try ?fortnite landing")
               else if(args[1] === "landing") return message.channel.send(fortniteland[whereland]);
               break;
-case "info":
-                if(!args[1]) return message.reply("What Would You Like To Know About? Try '?info version'")
-                else if(args[1] === "version") return message.channel.send("Wadia Is Currently On Version 1.3.2")
-                else if(args[1] === "creation") return message.channel.send(" Hi, I'm Wadia, I Was Created By Two People And I'll Call Them Wave And Diamondz They Are Beginner Coders So It Took Them 3 Days To Get The BotTo Work And Also NEITHER Of Them Knew The Slightest Part OF Node.js! \n I'm Currently Hosted On GitHub And Heroku! Click This Link To See Me On GitHub!")
-                break;
                 
         }
 })
