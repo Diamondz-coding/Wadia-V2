@@ -70,6 +70,9 @@ case 'fortnite':
               if(!args[1]) return message.reply("What About Fortnite?; Try ?fortnite landing")
               else if(args[1] === "landing") return message.channel.send(fortniteland[whereland]);
               break;
+    case "alan":
+        message.channel.send("alan says hello!")
+        break;
                 
         }
 })
